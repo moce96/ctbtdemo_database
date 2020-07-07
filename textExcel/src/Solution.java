@@ -43,7 +43,7 @@ public class Solution {
         /**
          *s_ship
          */
-        ShipFoundation.shipFoundation();      //船舶基础表
+//        ShipFoundation.shipFoundation();      //船舶基础表
 //        FishCatch.fishCatch();                //捕捞渔获表
 //        OilPatch.oilPatch();                  //油补表
 //        ShipCert.shipCert();                  //船舶证书表
