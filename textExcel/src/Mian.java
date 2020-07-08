@@ -1,4 +1,5 @@
 import InsertData.RegionData;
+import InsertData.e_accident.*;
 import InsertData.i_oceanfishing.*;
 import InsertData.j_port.*;
 import InsertData.l_project.*;
@@ -19,6 +20,7 @@ import InsertData.m_checkout.*;
 import InsertData.s_ship.*;
 import InsertData.u_user.*;
 import utilClass.Investigation;
+import utilClass.accident.Accident;
 
 public class Mian {
 
@@ -132,6 +134,11 @@ public class Mian {
 //        BreedReport.breedReport();                              //养殖及水产苗种情况上报表
 //        BreedTailWater.breedTailWater();                        //养殖尾水情况表
 //
+        /*
+        e事故类
+        * */
+//        e_accidentFoundation.accidentFoudation();
+//        e_accidentPerson.accidentPerson();
 //
 //        /**
 //         * h_market
