@@ -3,7 +3,7 @@ package InsertData.u_user;
 import getAllByExcel.announce.GetDepartment;
 import getAllByExcel.company.GetCompany;
 import getAllByExcel.user.GetUser;
-import random.RandomDate;
+import random.*;
 import random.RandomNumber;
 import utilClass.Department;
 import utilClass.company.Company;

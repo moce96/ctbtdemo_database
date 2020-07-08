@@ -2,7 +2,7 @@ package InsertData.b_Crew;
 
 import getAllByExcel.crew.GetCrew;
 import getAllByExcel.crew.GetCrewCertType;
-import random.RandomDate;
+import random.*;
 import random.RandomNumber;
 import utilClass.crew.Crew;
 import utilClass.crew.CrewCertType;
@@ -44,8 +44,8 @@ public class CrewExam {
         for (int i = 0; i <= 700; i++) {
 
             try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                conn = DriverManager.getConnection(url,user,password);
+                Class.forName(mysqlMessage[0]);
+                    conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO b_crewExam(personId,examContent,examDate,examResult,enclosure)" +
                         "VALUES(?,?,?,?,?)";
 

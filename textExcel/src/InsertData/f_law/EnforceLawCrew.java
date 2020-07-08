@@ -1,7 +1,7 @@
 package InsertData.f_law;
 
 import getAllByExcel.law.GetLawMan;
-import random.RandomDate;
+import random.*;
 import random.RandomNumber;
 import utilClass.law.LawMan;
 

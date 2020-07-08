@@ -2,7 +2,7 @@ package InsertData.i_oceanfishing;
 
 import getAllByExcel.company.GetCompany;
 import getAllByExcel.ship.GetShip;
-import random.RandomDate;
+import random.*;
 import random.RandomNumber;
 import utilClass.company.Company;
 import utilClass.ship.Ship;

@@ -2,7 +2,7 @@ package InsertData.k_oceanpasture;
 
 import getAllByExcel.company.GetCompany;
 import getAllByExcel.k_oceanpasture.GetOceanPasture;
-import random.RandomDate;
+import random.*;
 import random.RandomJson;
 import random.RandomNumber;
 import utilClass.company.Company;
@@ -45,8 +45,8 @@ public class OceanPastureEvent {
         for (int i = 0; i <= 20; i++) {
 
             try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                conn = DriverManager.getConnection(url,user,password);
+                Class.forName(mysqlMessage[0]);
+                    conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO  k_oceanPastureEvent(pastureId,eventId,companyName,content,date,veido)" +
                         "VALUES(?,?,?,?,?,?)";
 

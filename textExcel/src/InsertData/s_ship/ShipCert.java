@@ -2,7 +2,8 @@ package InsertData.s_ship;
 
 import getAllByExcel.crew.GetCrew;
 import getAllByExcel.ship.GetShip;
-import random.RandomDate;
+import random.MysqlRead;
+import random.*;
 import random.RandomNumber;
 import utilClass.crew.Crew;
 import utilClass.ship.Ship;
@@ -45,11 +46,11 @@ public class ShipCert {
         List<Crew> personList = getPersonId.getAllByExcel();
 
         //开始插入数据
-        for (int i=0;i<=250;i++) {
+        for (int i=0;i<=2000;i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO s_shipCert(certId,certType,shipId,certName,holder,holderId,holderPhone,holderMobilePhone,holderSatellitePhone,holderLoc,certEnclosure,certAppTime,certEndTime,others,photo)" +
                         "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 

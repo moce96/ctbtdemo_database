@@ -2,7 +2,7 @@ package InsertData.b_Crew;
 
 import getAllByExcel.GetInvestigation;
 import getAllByExcel.crew.GetCrew;
-import random.RandomDate;
+import random.*;
 import random.RandomNumber;
 import utilClass.Investigation;
 import utilClass.crew.Crew;
@@ -51,7 +51,7 @@ public class CrewComprehensiveEval {
 
                 try {
                     Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                    conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                     String sql = "INSERT INTO b_crewComprehensiveEval(personId,dangerCheckId,evalDate,evalLevel,evalContent,evalPoint,enclosure,description,checkPerson)" +
                             "VALUES(?,?,?,?,?,?,?,?,?)";
 

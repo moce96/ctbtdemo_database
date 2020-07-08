@@ -2,7 +2,7 @@ package InsertData.c_company;
 
 import getAllByExcel.company.GetCompany;
 import getAllByExcel.GetInvestigation;
-import random.RandomDate;
+import random.*;
 import random.RandomNumber;
 import utilClass.company.Company;
 import utilClass.Investigation;
