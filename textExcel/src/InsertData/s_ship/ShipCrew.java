@@ -28,7 +28,7 @@ public class ShipCrew {
         RandomDate randomDate = new RandomDate();
         RandomNumber randomNumber = new RandomNumber();
 
-        String[] position = {"副船长","舵手","水手","清洁工"};
+        String[] position = {"船长","副船长","舵手","水手","清洁工","清洁工","清洁工","水手","水手","水手","水手","水手","水手","水手","水手","舵手","舵手","舵手","舵手","舵手","舵手","舵手","舵手","舵手","舵手"};
 
 
 

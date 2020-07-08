@@ -46,11 +46,11 @@ public class CultureSituation {
 
 
         //开始插入数据
-        for (int i=0; i<=25; i++) {
+        for (int i=0; i<=50; i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO d_cultureSituation(baseId,fryType,fryNumber,time,frySource)" +
                         "VALUES(?,?,?,?,?)";
 

@@ -29,7 +29,7 @@ public class MedicalRecord {
         RandomDate randomDate = new RandomDate();
         RandomNumber randomNumber = new RandomNumber();
 
-        String[] name = {"士大夫","法国撒","苏打粉","阿斯顿"};
+        String[] name = {"孔雀石绿","石胆","绿矾","硝酸亚贡","贡溴红","甲紫","新洁尔灭"};
         String[] image = {"http://news.91cy.cn/article/1_101870.html"};
         String[] medicaNumber = {"20","50","100","150","200","250"};
 
@@ -51,7 +51,7 @@ public class MedicalRecord {
 
 
         //开始插入数据
-        for (int i=0; i<=50; i++) {
+        for (int i=0; i<=100; i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);

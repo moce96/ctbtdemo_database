@@ -33,7 +33,7 @@ public class ShipCredit {
         String[] violationMark = {"+","-"};
         String[] violationLoc = {"30.19,121.94","30.22,121.55","30.33,122.34","30.22,123.11","30.36,122.56","30.17,121.93","30.25,121.65","30.12,122.25","30.25,123.09","30.26,122.44","30.39,121.94","30.22,121.25","30.13,122.34","30.22,123.21","30.16,122.56"};
         String[] violationDesc = {"证书失效出海作业","阻碍国家机关公务人员执法","违反海上安全交通规定","擅自进入国家限制水域或岛屿","使用虚假船名或船号"};
-        String[] disposalSituation = {"处理成功","处理失败"};
+        String[] disposalSituation = {"处理成功","处理失败","处理成功","处理成功"};
 
 
 
@@ -48,11 +48,11 @@ public class ShipCredit {
         List<ShipIncident> shipIncidents = getShipIncident.getAllByExcel();
 
         //开始插入数据
-        for (int i=0;i<=200;i++) {
+        for (int i=0;i<=2500;i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO s_shipCredit(shipId,shipIncidentId,shipIncidentTypeId,violationMark,violationDate,violationLoc,violationDesc,disposalSituation,disposer,enclose,disposalRecord)" +
                         "VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 

@@ -42,11 +42,11 @@ public class AquaBaseCert {
 
 
         //开始插入数据
-        for (int i=0; i<=10; i++) {
+        for (int i=0; i<=50; i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO d_aquaBaseCert(baseId,certType,certId,startDate,endDate,enclosure,description)" +
                         "VALUES(?,?,?,?,?,?,?)";
 

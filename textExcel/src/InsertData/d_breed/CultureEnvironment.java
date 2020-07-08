@@ -28,7 +28,7 @@ public class CultureEnvironment {
         RandomDate randomDate = new RandomDate();
         RandomNumber randomNumber = new RandomNumber();
 
-        String[] waterQuality = {"优秀","良好","较差"};
+        String[] waterQuality = {"优秀","良好","较差","优秀","良好","良好","良好","优秀"};
         String[] image = {"https://sucai.redocn.com/ziranfengjing_4302038.html"};
 
 

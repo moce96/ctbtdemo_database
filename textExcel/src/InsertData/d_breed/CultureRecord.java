@@ -48,7 +48,7 @@ public class CultureRecord {
 
 
         //开始插入数据
-        for (int i=0; i<=25; i++) {
+        for (int i=0; i<=50; i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);

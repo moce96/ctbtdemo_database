@@ -19,6 +19,7 @@ import InsertData.k_oceanpasture.*;
 import InsertData.l_project.*;
 import InsertData.m_checkout.*;
 import InsertData.s_ship.*;
+import InsertData.ship.ShipStakeholder;
 import InsertData.u_user.*;
 import random.MysqlRead;
 import sun.applet.Main;
@@ -56,6 +57,8 @@ public class Solution {
 //        ShipGroup.shipGroup();                //船舶编组表
 //        ShipLawResult.shipLawResult();          //船舶执法结果
 //        ThreeNoShip.threeNoShip();              //三无船只a
+//        ShipCirculation.shipCirculation();      //船舶流转记录表
+//        ShipStakeholder.shipStakeholder();      //船舶干系人表
 //
 //
 //        /**
@@ -130,7 +133,7 @@ public class Solution {
 //        CultureRecord.cultureRecord();                          //育苗记录表
 //        CultureEnvironment.cultureEnvironment();                //养殖环境数据表
 //        MedicalRecord.medicalRecord();                          //用药记录表
-//        ProductionProcess.productionProcess();                  //生产过程表
+//        ProductionProcess.productionProcess();                  //生产过程表   yzy
 //        FryDestination.fryDestination();                        //苗种去向表
 //        FrySource.frySource();                                  //苗种来源表
 //        DiseaseMonitor.diseaseMonitor();                        //疫病监测点表(后两个字段不知为啥报错)

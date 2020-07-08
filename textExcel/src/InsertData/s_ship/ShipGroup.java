@@ -47,7 +47,7 @@ public class ShipGroup {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO s_shipGroup(groupId,shipId,startTime,endTime,groupName,description)" +
                         "VALUES(?,?,?,?,?,?)";
 

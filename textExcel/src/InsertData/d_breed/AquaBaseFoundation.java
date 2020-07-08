@@ -54,7 +54,7 @@ public class AquaBaseFoundation {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO d_aquaBaseFoundation(baseId,baseName,baseType,attributionObjectId,functionType,cultureType,startDate,regionId)" +
                         "VALUES(?,?,?,?,?,?,?,?)";
 
