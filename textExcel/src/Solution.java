@@ -133,10 +133,10 @@ public class Solution {
 //        CultureRecord.cultureRecord();                          //育苗记录表
 //        CultureEnvironment.cultureEnvironment();                //养殖环境数据表
 //        MedicalRecord.medicalRecord();                          //用药记录表
-//        ProductionProcess.productionProcess();                  //生产过程表   yzy
+//        ProductionProcess.productionProcess();                  //生产过程表
 //        FryDestination.fryDestination();                        //苗种去向表
 //        FrySource.frySource();                                  //苗种来源表
-//        DiseaseMonitor.diseaseMonitor();                        //疫病监测点表(后两个字段不知为啥报错)
+//        DiseaseMonitor.diseaseMonitor();                        //疫病监测点表(后两个字段不知为啥报错)yzy
 //        Sensor.sensor();                                            //传感器表
 //        SensorData.sendsorData();                                //传感器数据表
 //        DiseaseMonitorEquipment.diseaseMonitorEquipment();      //疫病监测设备表
