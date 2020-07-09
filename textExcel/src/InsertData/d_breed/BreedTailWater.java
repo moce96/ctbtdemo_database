@@ -30,7 +30,7 @@ public class BreedTailWater {
         RandomNumber randomNumber = new RandomNumber();
 
         String[] tailWaterDischarge = {"20","30","40","50"};
-        String[] excessiveSituation = {"未超标","超标"};
+        String[] excessiveSituation = {"未超标","超标","未超标","未超标","未超标","未超标","未超标","未超标","未超标"};
 
 
         // 创建获得  excel 表数据的类
@@ -48,7 +48,7 @@ public class BreedTailWater {
 
 
         //开始插入数据
-        for (int i=0; i<=25; i++) {
+        for (int i=0; i<=50; i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);

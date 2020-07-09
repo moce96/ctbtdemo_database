@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c178373d-2cfb-4935-bc81-436822f820dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/mysql-connector-java-8.0.16.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/mysql-connector-java-8.0.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/InsertData/c_company/CompanyComprehensiveEval.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/InsertData/c_company/CompanyComprehensiveEval.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/Mian.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/Mian.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/textExcel/InsertData/d_breed/BreedTailWater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/InsertData/d_breed/BreedTailWater.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/textExcel/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/excel/aquabase.xls" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/excel/aquabase.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/excel/ship.xls" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/excel/ship.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/mysql.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InsertData/d_breed/ProductionProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertData/d_breed/ProductionProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InsertData/d_breed/BreedTailWater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertData/d_breed/BreedTailWater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excel/aquabase.xls" beforeDir="false" afterPath="$PROJECT_DIR$/src/excel/aquabase.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysql.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,11 +237,11 @@
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040/-1440.-79.1440.860@0.0.1920.1040" timestamp="1586396448612" />
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040/-1440.3.1440.860@0.0.1920.1040" timestamp="1587364124369" />
-    <state x="640" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1594258454062">
+    <state x="640" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1594282671772">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1440.-79.1440.860@0.0.1920.1040" timestamp="1586740329532" />
-    <state x="640" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1440.3.1440.860@0.0.1920.1040" timestamp="1594258454062" />
+    <state x="640" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1440.3.1440.860@0.0.1920.1040" timestamp="1594282671772" />
     <state x="658" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1594107640185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
