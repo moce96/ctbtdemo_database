@@ -138,7 +138,7 @@ public class Solution {
 //        FrySource.frySource();                                  //苗种来源表
 //        DiseaseMonitor.diseaseMonitor();                        //疫病监测点表(后两个字段不知为啥报错)手动修改
 //        Sensor.sensor();                                            //传感器表
-//        SensorData.sendsorData();                                //传感器数据表
+//        SensorData.sensorData();                                //传感器数据表
 //        DiseaseMonitorEquipment.diseaseMonitorEquipment();      //疫病监测设备表
 //        DiseaseSituation.diseaseSituation();                    //疫病情况表
 //        BreedReport.breedReport();                              //养殖及水产苗种情况上报表

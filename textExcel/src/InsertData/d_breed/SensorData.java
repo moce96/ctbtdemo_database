@@ -25,7 +25,7 @@ public class SensorData {
     private static final String[] mysqlMessage = MysqlRead.message;
     private static String password = "123456";
 
-    public static void sendsorData() {
+    public static void sensorData() {
 
         Random random = new Random();
         RandomDate randomDate = new RandomDate();
