@@ -59,7 +59,7 @@ public class EnforceLawShipExpansion {
 
                 try {
                     Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                    conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                     String sql = "INSERT INTO f_enforceLawShipExpansion(shipId,shipName,type,camouflageLicence,camouflageAppearance)" +
                             "VALUES(?,?,?,?,?)";
 

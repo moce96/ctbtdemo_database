@@ -49,7 +49,7 @@ public class EngineeringConstruction {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO  g_engineeringConstruction(engiName,engiType,engiId,regionId,description,eia,engiState,startDate,endDate,photo)" +
                         "VALUES(?,?,?,?,?,?,?,?,?,?)";
 

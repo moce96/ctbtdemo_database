@@ -119,6 +119,7 @@ public class Solution {
 //        EngiAuditConfirm.engiAuditConfirm();                    //工程审批确认
 //        EngiPhoto.engiPhoto();                                  //工程影像采集表
 //        ReclamationRecord.reclamationRecord();                  //围填海记录
+//        EngiEquipment.engiEquipment();                          //工程监测设备表
 //
 //        /**
 //         * d_breed

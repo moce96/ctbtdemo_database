@@ -47,7 +47,7 @@ public class ReclamationRecord {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO g_reclamationRecord(reclamationId,date,shipId,area)" +
                         "VALUES(?,?,?,?)";
 
@@ -55,14 +55,14 @@ conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessag
                 pstm = conn.prepareStatement(sql);
 
                 pstm.setString(1,reclamationId[random.nextInt(reclamationId.length)]);
-                pstm.setObject(2,randomDate.generateRandomDate("2019-03-06","2020-03-04"));
+                pstm.setObject(2,randomDate.generateRandomDate("2018-06-06","2020-03-04"));
                 //找到船舶基础表中  工程船的id 才可以插入该数据表，因为只有工程船才能进行工程。
                 int j = random.nextInt(shipList.size());
                 while (!shipList.get(j).shipTypeId.equals("2")) {
                     j = random.nextInt(shipList.size());
                 }
                 pstm.setString(3,shipList.get(j).shipId);
-                pstm.setString(4,randomNumber.generate(1,2)+"平方千米");
+                pstm.setString(4,randomNumber.generate(1,2));
 
 
                 pstm.executeUpdate();
