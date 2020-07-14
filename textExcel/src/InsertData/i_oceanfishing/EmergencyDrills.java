@@ -8,7 +8,9 @@ import utilClass.company.Company;
 import utilClass.ship.Ship;
 
 import java.sql.*;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class EmergencyDrills {
@@ -16,10 +18,7 @@ public class EmergencyDrills {
 
     private static Connection conn = null;
     private static PreparedStatement pstm = null;
-    private static ResultSet rt = null;
-    private static String url = "jdbc:mysql://192.168.105.197:3306/ctbtdemo?serverTimezone=GMT%2B8&useSSL=false";
     private static final String[] mysqlMessage = MysqlRead.message;
-    private static String password = "123456";
 
     public static void emergencyDrills() {
 
@@ -28,15 +27,15 @@ public class EmergencyDrills {
         RandomNumber randomNumber = new RandomNumber();
 
 
-        String[] familyname = {"赵","钱","孙","李","周","吴","郑","王","宋","陈","白","黄","梁"};
-        String[] firstname = {"伟","芳","秀英","娜","敏","静","立","丽","强","军","磊","刚","平","子良","建国","建军","国林","国梁","鸿蒙","浩宇","轩","艳","枫","鸣","浮萍"};
-        String[] description = {"为了防止因故着火，进行防火演习","为了确保台风天安全，进行演习","为了确保大浪来袭时的安全，进行演习"};
+//        String[] description = {"为了防止因故着火，进行防火演习","为了确保台风天安全，进行演习","为了确保大浪来袭时的安全，进行演习"};
         String[] content = {"防火演习","台风演习","大浪演习"};
         String[] video = {"https://news.tezhongzhuangbei.com/zbkx_date_1041.html"};
         String[] existQuestion = {"船员重视程度不足","演习比较生疏","船员行动太慢"};
         String[] solution = {"加强安全教育","批评教育队员","重新演习"};
-
-
+        Map<String, String> description = new HashMap<String, String>();
+        description.put("防火演习","为了防止因故着火，进行防火演习");
+        description.put("台风演习","为了确保台风天安全，进行演习");
+        description.put("大浪演习","为了确保大浪来袭时的安全，进行演习");
 
         // 创建获得 ship excel 表数据的类
         GetShip getShip = new GetShip();
@@ -48,7 +47,7 @@ public class EmergencyDrills {
 
 
         //开始插入数据
-        for (int i=0;i<=30;i++) {
+        for (int i=0;i<=40;i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);
@@ -66,10 +65,11 @@ conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessag
                     j = random.nextInt(shipList.size());
                 }
                 pstm.setString(1,shipList.get(j).shipId);
-                pstm.setObject(2,randomDate.generateRandomDate("2019-01-01","2019-12-12"));
+                pstm.setObject(2,randomDate.generateRandomDate("2019-01-01","2020-07-12"));
                 j = random.nextInt(companyList.size());
-                pstm.setString(3,description[random.nextInt(description.length)]);
-                pstm.setString(4,content[random.nextInt(content.length)]);
+                String chosenContent = content[random.nextInt(content.length)];
+                pstm.setString(3,description.get(chosenContent));
+                pstm.setString(4,chosenContent);
                 pstm.setString(5,video[random.nextInt(video.length)]);
                 pstm.setString(6,existQuestion[random.nextInt(existQuestion.length)]);
                 pstm.setString(7,solution[random.nextInt(solution.length)]);

@@ -5,7 +5,7 @@ import getAllByExcel.crew.GetCrew;
 import random.MysqlRead;
 import random.RandomDate;
 import random.RandomNumber;
-import utilClass.GenerateName;
+import random.GenerateName;
 import utilClass.accident.Accident;
 import utilClass.crew.Crew;
 

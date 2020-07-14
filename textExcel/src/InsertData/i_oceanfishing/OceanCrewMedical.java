@@ -17,10 +17,8 @@ public class OceanCrewMedical {
 
     private static Connection conn = null;
     private static PreparedStatement pstm = null;
-    private static ResultSet rt = null;
-    private static String url = "jdbc:mysql://192.168.105.197:3306/ctbtdemo?serverTimezone=GMT%2B8&useSSL=false";
     private static final String[] mysqlMessage = MysqlRead.message;
-    private static String password = "123456";
+
 
     public static void oceanCrewMedical() {
 
@@ -71,7 +69,7 @@ conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessag
 
                 int j = random.nextInt(crewList.size());
                 pstm.setString(1,crewList.get(j).id);
-                pstm.setObject(2,randomDate.generateRandomDate("2019-01-01","2019-12-12"));
+                pstm.setObject(2,randomDate.generateRandomDate("2019-01-01","2020-07-12"));
                 pstm.setString(3,crewList.get(j).shipId);
                 j = random.nextInt(medicalType.length);
                 pstm.setString(4,medicalType[j]);

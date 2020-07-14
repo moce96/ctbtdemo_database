@@ -16,10 +16,8 @@ public class CompanyTalk {
 
     private static Connection conn = null;
     private static PreparedStatement pstm = null;
-    private static ResultSet rt = null;
-    private static String url = "jdbc:mysql://192.168.105.197:3306/ctbtdemo?serverTimezone=GMT%2B8&useSSL=false";
     private static final String[] mysqlMessage = MysqlRead.message;
-    private static String password = "123456";
+
 
     public static void companyTalk() {
 
@@ -27,9 +25,6 @@ public class CompanyTalk {
         RandomDate randomDate = new RandomDate();
         RandomNumber randomNumber = new RandomNumber();
 
-
-        String[] familyname = {"赵","钱","孙","李","周","吴","郑","王","宋","陈","白","黄","梁"};
-        String[] firstname = {"伟","芳","秀英","娜","敏","静","立","丽","强","军","磊","刚","平","子良","建国","建军","国林","国梁","鸿蒙","浩宇","轩","艳","枫","鸣","浮萍"};
 
         String[] shipSate = {"优秀","良好","较差"};
         String[] crewSate = {"优秀","良好","较差"};
@@ -47,7 +42,7 @@ public class CompanyTalk {
 
 
         //开始插入数据
-        for (int i=0;i<=50;i++) {
+        for (int i=0;i<=20;i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);
@@ -65,7 +60,7 @@ conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessag
                     j = random.nextInt(shipList.size());
                 }
                 pstm.setString(1,shipList.get(j).shipId);
-                pstm.setObject(2,randomDate.generateRandomDate("2019-01-01","2019-12-12"));
+                pstm.setObject(2,randomDate.generateRandomDate("2019-01-01","2020-07-01"));
                 j = random.nextInt(companyList.size());
                 pstm.setString(3,companyList.get(j).id);
                 pstm.setString(4,shipSate[random.nextInt(shipSate.length)]);

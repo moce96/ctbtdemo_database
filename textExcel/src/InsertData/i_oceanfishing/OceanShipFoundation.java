@@ -11,6 +11,8 @@ import utilClass.crew.Crew;
 import utilClass.ship.Ship;
 
 import java.sql.*;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -20,10 +22,8 @@ public class OceanShipFoundation {
 
     private static Connection conn = null;
     private static PreparedStatement pstm = null;
-    private static ResultSet rt = null;
-    private static String url = "jdbc:mysql://192.168.105.197:3306/ctbtdemo?serverTimezone=GMT%2B8&useSSL=false";
     private static final String[] mysqlMessage = MysqlRead.message;
-    private static String password = "123456";
+
 
     public static void oceanShipFoundation() {
 
@@ -36,7 +36,7 @@ public class OceanShipFoundation {
         String[] fuel = {"可燃冰","煤炭","石油"};
         String[] fish = {"黄鱼","乌贼","海蜇","带鱼"};
 
-        String[] destination  = {"浙江","山东","江苏","福建","广东"};
+        String[] destination  = {"浙江","山东","江苏","福建","广东","浙江","浙江","浙江","浙江","浙江","浙江"};
 
 
 
@@ -48,14 +48,15 @@ public class OceanShipFoundation {
         List<Ship> shipList = getShip.getAllByExcel();
         List<Company> companyList = getCompany.getAllByExcel();
 
+        Calendar update = Calendar.getInstance();
 
         //开始插入数据
-        for (int i=0;i<=70;i++) {
+        for (int i=0;i<=100;i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);
 conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
-                String sql = "INSERT INTO  i_oceanShipFoundation(shipId,sailingTime,returnTime,supplyResource,destination,updateDate,companyId)" +
+                String sql = "INSERT INTO  i_oceanShipFoundation(shipId,sailing_time,return_time,supply_resource,destination,update_date,company_id)" +
                         "VALUES(?,?,?,?,?,?,?)";
 
 
@@ -67,13 +68,17 @@ conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessag
                 while (!shipList.get(j).shipTypeId.equals("1")) {
                     j = random.nextInt(shipList.size());
                 }
-                pstm.setString(1,shipList.get(j).shipId);
-                pstm.setObject(2,randomDate.generateRandomDate("2018-01-01","2018-06-06"));
-                pstm.setObject(3,randomDate.generateRandomDate("2018-07-07","2019-02-02"));
+                Ship chosenShip = shipList.get(random.nextInt(shipList.size()));
+                pstm.setString(1,chosenShip.shipId);
+                pstm.setObject(2,randomDate.generateRandomDate("2019-01-01","2020-01-01"));
+                Date chosenDate = randomDate.generateRandomDate("2020-01-01","2020-07-02");
+                pstm.setObject(3,chosenDate);
                 pstm.setString(4,randomNumber.generate(1,2));
                 pstm.setString(5,destination[random.nextInt(destination.length)]);
-                pstm.setObject(6,randomDate.generateRandomDate("2019-01-01","2019-06-06"));
-                pstm.setString(7,"a");
+                update.setTime(chosenDate);
+                update.add(Calendar.DAY_OF_YEAR,random.nextInt(10));
+                pstm.setObject(6,update.getTime());
+                pstm.setString(7,chosenShip.companyId);
 
 
                 pstm.executeUpdate();

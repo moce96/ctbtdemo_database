@@ -16,10 +16,8 @@ public class OceanResources {
 
     private static Connection conn = null;
     private static PreparedStatement pstm = null;
-    private static ResultSet rt = null;
-    private static String url = "jdbc:mysql://192.168.105.197:3306/ctbtdemo?serverTimezone=GMT%2B8&useSSL=false";
     private static final String[] mysqlMessage = MysqlRead.message;
-    private static String password = "123456";
+
 
     public static void oceanResources() {
 
