@@ -56,7 +56,7 @@ public class ProjectBank {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO  l_projectBank(projectId,projectName,reportTime,projectSpecificId,reserveTime,executionTime,chargePerson,contact,buildingarea,strucompanyID,enviroInfluReport,confirmFile)" +
                         "VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
 

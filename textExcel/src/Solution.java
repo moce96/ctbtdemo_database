@@ -18,6 +18,7 @@ import InsertData.j_port.*;
 import InsertData.k_oceanpasture.*;
 import InsertData.l_project.*;
 import InsertData.m_checkout.*;
+import InsertData.o_fishreserve.ReserveEquipment;
 import InsertData.s_ship.*;
 import InsertData.ship.ShipStakeholder;
 import InsertData.u_user.*;
@@ -34,12 +35,12 @@ public class Solution {
 
 
 //        LawEnforcement.lawEnforcement();                  //执法数据
-//        DangerCheck.investigation();                  //排查隐患数据
+//        DangerCheck.investigation();                      //排查隐患数据
 //        DisputeData.disputeData();                        //渔事纠纷
 //        FisheryProtectedArea.fisheryProtectedArea();      //渔业保护区
 //        RegionBW.regionBW();                              //区域黑白名单
 //        ReleaseSituation.releaseSituation();              //增值流放情况a
-//        RegionData.regionData();                            //区域基本信息
+//        RegionData.regionData();                          //区域基本信息
 
         /**
          *s_ship
@@ -227,6 +228,11 @@ public class Solution {
 //        ShipConstructAndMaintenance.shipConstructAndMaintenance();  //船舶建造维修表a
 //        ShipyardCredit.shipyardCredit();                    //船厂信用表a
 //        ShipyardMonitor.shipyardMonitor();                  //船厂监控设备表a
+
+        /**
+         * o_fishreserve
+         */
+        ReserveEquipment.reserveEquipment();                //渔业保护区设备表
 
 
 

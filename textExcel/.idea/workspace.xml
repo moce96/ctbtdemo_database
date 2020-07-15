@@ -20,29 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c178373d-2cfb-4935-bc81-436822f820dc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/InsertData/o_fishreserve/ReserveEquipment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/mysql-connector-java-8.0.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/InsertData/i_oceanfishing/CompanyTalk.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/InsertData/i_oceanfishing/CompanyTalk.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/InsertData/i_oceanfishing/EmergencyDrills.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/InsertData/i_oceanfishing/EmergencyDrills.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/InsertData/i_oceanfishing/OceanCrewMedical.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/InsertData/i_oceanfishing/OceanCrewMedical.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/InsertData/i_oceanfishing/OceanResources.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/InsertData/i_oceanfishing/OceanResources.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/InsertData/i_oceanfishing/OceanShipFoundation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/InsertData/i_oceanfishing/OceanShipFoundation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/Mian.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/Mian.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textExcel/mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textExcel/mysql.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InsertData/e_accident/e_accidentPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertData/e_accident/e_accidentPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InsertData/i_oceanfishing/CompanyTalk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertData/i_oceanfishing/CompanyTalk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InsertData/i_oceanfishing/EmergencyDrills.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertData/i_oceanfishing/EmergencyDrills.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InsertData/i_oceanfishing/OceanCrewMedical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertData/i_oceanfishing/OceanCrewMedical.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InsertData/i_oceanfishing/OceanResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertData/i_oceanfishing/OceanResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InsertData/i_oceanfishing/OceanShipFoundation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertData/i_oceanfishing/OceanShipFoundation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InsertData/i_oceanfishing/OceanSpecificDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertData/i_oceanfishing/OceanSpecificDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excel/company.xls" beforeDir="false" afterPath="$PROJECT_DIR$/src/excel/company.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/excel/ship.xls" beforeDir="false" afterPath="$PROJECT_DIR$/src/excel/ship.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysql.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/random/MysqlRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/random/MysqlRead.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilClass/GenerateName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/random/GenerateName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InsertData/l_project/ProjectBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InsertData/l_project/ProjectBank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/excel/project.xls" beforeDir="false" afterPath="$PROJECT_DIR$/src/excel/project.xls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +88,7 @@
       <recent name="D:\textExcel\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Mian">
+  <component name="RunManager" selected="Application.Solution">
     <configuration name="AnnounceFoundation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="InsertData.a_announce.AnnounceFoundation" />
       <module name="textExcel" />
@@ -162,8 +144,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Mian" />
         <item itemvalue="Application.Solution" />
+        <item itemvalue="Application.Mian" />
         <item itemvalue="Application.ToList" />
         <item itemvalue="Application.AnnounceFoundation" />
         <item itemvalue="Application.Json2" />
@@ -213,7 +195,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -291,11 +275,11 @@
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040/-1440.-79.1440.860@0.0.1920.1040" timestamp="1586396448612" />
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040/-1440.3.1440.860@0.0.1920.1040" timestamp="1587364124369" />
-    <state x="640" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1594622229046">
+    <state x="640" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1594792733438">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1440.-79.1440.860@0.0.1920.1040" timestamp="1586740329532" />
-    <state x="640" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1440.3.1440.860@0.0.1920.1040" timestamp="1594622229046" />
+    <state x="640" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1440.3.1440.860@0.0.1920.1040" timestamp="1594792733438" />
     <state x="658" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1594107640185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
