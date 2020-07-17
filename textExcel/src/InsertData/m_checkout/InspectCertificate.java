@@ -52,8 +52,8 @@ public class InspectCertificate {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
-                String sql = "INSERT INTO m_inspectCertificate(inspectCertificateId,inspectiCertificateType,shipId,startDate,expireDate)" +
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                String sql = "INSERT INTO m_inspect_certificate(certificate_id,inspect_certificate_type,ship_id,start_date,expire_date)" +
                         "VALUES(?,?,?,?,?)";
 
 
@@ -61,6 +61,7 @@ conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessag
                 pstm = conn.prepareStatement(sql);
 
                 pstm.setString(1,inspectApply.inspectCertificateId);
+//                pstm.setString(1,randomNumber.generate(1,8));
                 if (inspectApply.inspectType.equals("船舶")) {
                     pstm.setString(2,inspectCertificateType1[random.nextInt(inspectCertificateType1.length)]);
 

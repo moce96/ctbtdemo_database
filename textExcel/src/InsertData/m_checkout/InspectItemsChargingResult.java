@@ -51,8 +51,8 @@ public class InspectItemsChargingResult {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
-                String sql = "INSERT INTO m_inspectItemsChargingResult(shipId,inspectItemId,chargeAmount,chargeDate)" +
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                String sql = "INSERT INTO m_inspect_items_charging_result(ship_id,inspect_item_id,charge_amount,charge_date)" +
                         "VALUES(?,?,?,?)";
 
 

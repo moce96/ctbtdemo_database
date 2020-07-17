@@ -1,8 +1,10 @@
+import getAllByExcel.checkout.GetInspectApply;
 import getAllByExcel.company.GetCompany;
 import getAllByExcel.engineering.GetAudit;
 import random.MysqlRead;
 import random.*;
 import random.RandomNumber;
+import utilClass.checkout.InspectApply;
 import utilClass.company.Company;
 import utilClass.engineering.Audit;
 
@@ -37,31 +39,30 @@ public class aa {
         // 创建获得  excel 表数据的类
         GetAudit getAudit = new GetAudit();
         GetCompany getCompany = new GetCompany();
+        GetInspectApply getInspectApply = new GetInspectApply();
 
 
         // 用从表里获得的数据  生成列表  用于填充数据库
         List<Audit> auditList = getAudit.getAllByExcel();
         List<Company> companyList = getCompany.getAllByExcel();
+        List<InspectApply> inspectApplies = getInspectApply.getAllByExcel();
 
 
 
 
         //开始插入数据
-        for (int i = 0; i<=50; i++) {
+        for (InspectApply inspectApply : inspectApplies) {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
-                String sql = "INSERT INTO aa(id,name,time,booldType)" +
-                        "VALUES(?,?,?,?)";
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                String sql = "INSERT INTO a_aaaa(id,type) SELECT shipId,shipTypeId FROM s_shipFoundation WHERE shipId = ?";
 
 
                 pstm = conn.prepareStatement(sql);
 
-                pstm.setString(1,randomNumber.generate(1,18));
-                pstm.setString(2,familyname[random.nextInt(familyname.length)]+firstname[random.nextInt(firstname.length)]);
-                pstm.setObject(3,randomDate.generateRandomDate("2011-01-01","2019-12-12"));
-                pstm.setString(4,booldType[random.nextInt(booldType.length)]);
+                pstm.setString(1,inspectApply.shipId);
+
 
 
                 pstm.executeUpdate();

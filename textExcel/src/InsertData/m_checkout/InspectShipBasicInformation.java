@@ -30,6 +30,9 @@ public class InspectShipBasicInformation {
         RandomNumber randomNumber = new RandomNumber();
         RandomJson randomJson = new RandomJson();
 
+        String[] lift_equipment = {"可使用","可使用","可使用","可使用","可使用","可使用","可使用","可使用","可使用","可使用","已损坏","可使用","可使用","可使用","可使用","可使用","可使用"};
+        String[] ship_load_line = {"良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","部分损坏","部分损坏","部分损坏","部分损坏","部分损坏","部分损坏","损坏严重","损坏严重","损坏严重","损坏严重"};
+
 
 
 
@@ -50,8 +53,8 @@ public class InspectShipBasicInformation {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
-                String sql = "INSERT INTO m_inspectShipBasicInformation(shipId,shipType,shipSafeEquipment,tons,fishing,liftEquipment,shipLoadLine,hull,equipment,electromechanical,refrigerationDevice,radioEquipment)" +
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                String sql = "INSERT INTO m_inspect_ship_basic_information(ship_id,ship_type,ship_safe_equipment,tons,fishing,lift_equipment,ship_load_line,hull,equipment,electronic_mechanism,refrigeration_device,radio_equipment)" +
                         "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 
@@ -59,18 +62,32 @@ conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessag
                 pstm = conn.prepareStatement(sql);
 
                 pstm.setString(1,inspectApply.shipId);
-                pstm.setString(2,inspectApply.shipType);
-                pstm.setString(3,"a");
+                if (inspectApply.shipType == "1") {
+                    pstm.setString(2,"远洋渔船");
+                } else if (inspectApply.shipType == "2") {
+                    pstm.setString(2,"工程船");
+                } else if (inspectApply.shipType == "3") {
+                    pstm.setString(2,"海钓船");
+                } else if (inspectApply.shipType == "4") {
+                    pstm.setString(2,"执法船");
+                } else if (inspectApply.shipType == "5") {
+                    pstm.setString(2,"休闲渔船");
+                } else if (inspectApply.shipType == "6") {
+                    pstm.setString(2,"国内渔船");
+                } else {
+                    pstm.setString(2,"未标明");
+                }
+                pstm.setString(3,"暂无");
                 pstm.setString(4,randomNumber.generate(1,3));
-                pstm.setString(5,"b");
-                pstm.setString(6,"c");
-                pstm.setString(7,"d");
-                pstm.setString(8,"e");
-                pstm.setString(9,"a");
-                pstm.setString(10,"a");
-                pstm.setString(11,"a");
-                pstm.setString(12,"a");
-                pstm.setString(13,"a");
+                pstm.setString(5,"暂无");
+                pstm.setString(6,lift_equipment[random.nextInt(lift_equipment.length)]);
+                pstm.setString(7,ship_load_line[random.nextInt(ship_load_line.length)]);
+                pstm.setString(8,ship_load_line[random.nextInt(ship_load_line.length)]);
+                pstm.setString(9,ship_load_line[random.nextInt(ship_load_line.length)]);
+                pstm.setString(10,ship_load_line[random.nextInt(ship_load_line.length)]);
+                pstm.setString(11,ship_load_line[random.nextInt(ship_load_line.length)]);
+                pstm.setString(12,ship_load_line[random.nextInt(ship_load_line.length)]);
+                pstm.setString(13,ship_load_line[random.nextInt(ship_load_line.length)]);
 
 
                 pstm.executeUpdate();

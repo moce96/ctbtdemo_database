@@ -49,12 +49,12 @@ public class InspectCertPrintHistory {
         List<utilClass.checkout.InspectApply> inspectApplyList = getInspectApply.getAllByExcel();
 
         //开始插入数据
-        for (int i=0; i<110; i++) {
+        for (int i=0; i<2000; i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
-                String sql = "INSERT INTO m_inspectCertPrintHistory(inspectCertificateId,printDate,printPerson)" +
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                String sql = "INSERT INTO m_cert_print_history(inspect_certificate_id,print_date,print_person)" +
                         "VALUES(?,?,?)";
 
 
@@ -64,7 +64,7 @@ conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessag
                 int j = random.nextInt(inspectApplyList.size());
                 pstm.setString(1,inspectApplyList.get(j).inspectCertificateId);
                 pstm.setObject(2,randomDate.generateRandomDate("2019-06-01","2019-12-01"));
-                pstm.setString(3,familyname[random.nextInt(familyname.length)]+firstname[random.nextInt(firstname.length)]);
+                pstm.setString(3,GenerateName.generate());
 
                 pstm.executeUpdate();
 

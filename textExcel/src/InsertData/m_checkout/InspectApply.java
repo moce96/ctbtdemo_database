@@ -50,27 +50,37 @@ public class InspectApply {
         List<utilClass.checkout.InspectApply> inspectApplyList = getInspectApply.getAllByExcel();
 
         //开始插入数据
-        for (utilClass.checkout.InspectApply inspectApply : inspectApplyList) {
+//        for (utilClass.checkout.InspectApply inspectApply : inspectApplyList) {
+        for (int i=0;i<2000;i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
-                String sql = "INSERT INTO m_inspectApply(shipId,inspectApplyDate,inspectType,fisheryProductId,inspectItemIdList,currentStatus,currentAuditor,auditDate,inspectCertificateId)" +
-                        "VALUES(?,?,?,?,?,?,?,?,?)";
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                String sql = "INSERT INTO m_inspect_apply(ship_id,inspect_apply_date,inspect_type,fishery_product_id,inspect_item_id_list,current_status,current_auditor,audit_date)" +
+                        "VALUES(?,?,?,?,?,?,?,?)";
 
 
 
                 pstm = conn.prepareStatement(sql);
 
-                pstm.setString(1,inspectApply.shipId);
+//                pstm.setString(1,inspectApply.shipId);
+                int j = random.nextInt(shipList.size());
+                pstm.setString(1,shipList.get(j).shipId);
                 pstm.setObject(2,randomDate.generateRandomDate("2018-01-01","2018-06-06"));
                 pstm.setString(3,inspectType[random.nextInt(inspectType.length)]);
                 pstm.setString(4,randomNumber.generate(1,5));
-                pstm.setString(5,inspectApply.inspectItemIdList);
+//                pstm.setString(5,inspectApply.inspectItemIdList);
+                String list = "";
+                int k = random.nextInt(1)+1;
+                for (int l=0;l<k;l++) {
+                    int m = random.nextInt(inspectItems.size());
+                    list = list+inspectItems.get(m).id;
+                }
+                pstm.setString(5,list);
                 pstm.setString(6,currentStatus[random.nextInt(currentStatus.length)]);
-                pstm.setString(7,familyname[random.nextInt(familyname.length)]+firstname[random.nextInt(firstname.length)]);
+                pstm.setString(7,GenerateName.generate());
                 pstm.setObject(8,randomDate.generateRandomDate("2018-07-01","2018-12-12"));
-                pstm.setString(9,inspectApply.inspectCertificateId);
+//                pstm.setString(9,inspectApply.inspectCertificateId);
 
 
                 pstm.executeUpdate();

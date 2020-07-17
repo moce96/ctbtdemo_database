@@ -41,7 +41,7 @@ public class InspectItemsPrice {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO  m_inspectItemsPrice(inspectItemId,inspectItemName,inspectItemContent,chargeStandard)" +
                         "VALUES(?,?,?,?)";
 
