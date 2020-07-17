@@ -157,7 +157,7 @@ public class Mian {
 //        SupplyBaseStock.supplyBaseStock();                      //补给基地资源存量表
 //        OceanShipFoundation.oceanShipFoundation();              //远洋船舶基础信息表（扩展表）
 //        OceanCrewMedical.oceanCrewMedical();                    //远洋船员医疗表
-        OceanSpecificDeclaration.oceanSpecificDeclaration();    //远洋专项申请表
+//        OceanSpecificDeclaration.oceanSpecificDeclaration();    //远洋专项申请表
 //        CompanyTalk.companyTalk();                              //远洋船舶与企业沟通表
 //        EmergencyDrills.emergencyDrills();                      //远洋渔船应急演练情况表
 //        PolicyPublish.policyPublish();                          //政策法规发布表
@@ -169,7 +169,7 @@ public class Mian {
 //        PortFunctionArea.portFunctionArea();                    //港口功能区划层
 //        FunctionAreaShipStop.functionAreaShipStop();            //港口功能区停泊船舶列表
 //        ArrivePort.arrivePort();                                //进港汇报表
-//        LeavePort.leavePort();                                  //离港汇报表
+        LeavePort.leavePort();                                  //离港汇报表
 //        BeaconFoundation.beaconFoundation();                    //航标基础表
 //        BeaconSituation.beaconSituation();                       //航标状况表
 //        CameraInformation.cameraInformation();                  //摄像头信息表

@@ -218,7 +218,7 @@ public class Solution {
 //        InspectCertificate.inspectCertificate();            //检验证书表
 //        InspectCertPrintHistory.inspectCertPrintHistory();  //检验证书打印历史表
 //        InspectItemsChargingResult.inspectItemsChargingResult();    //检验项目收费结果
-        InspectShipBasicInformation.inspectShipBasicInformation();  //检验船舶基本信息表s
+//        InspectShipBasicInformation.inspectShipBasicInformation();  //检验船舶基本信息表s
 //        InspectItemResult.inspectItemResult();              //检验项目结果表a
 //        ServiceInspectReport.serviceInspectReport();        //营运检验报告表a
 //        InspectExpert.inspectExpert();                      //检测专家a
