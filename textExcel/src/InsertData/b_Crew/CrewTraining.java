@@ -28,7 +28,7 @@ public class CrewTraining {
 
 
         String[] trainContent = {"船舶驾驶培训","船舶知识培训","游泳培训","基础知识培训","基础技能培训"};
-        String[] trainResult = {"差","良好","优秀"};
+        String[] trainResult = {"差","良好","优秀","优秀","优秀","优秀","优秀"};
 
 
         // 创建获得 ship excel 表数据的类
@@ -40,7 +40,7 @@ public class CrewTraining {
         List<CrewCertType> crewCertTypes = getCrewCertType.getAllByExcel();
 
         //开始插入数据
-        for (int i = 0; i <= 700; i++) {
+        for (int i = 0; i <= 8000; i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);

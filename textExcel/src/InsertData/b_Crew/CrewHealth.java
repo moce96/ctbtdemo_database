@@ -30,7 +30,7 @@ public class CrewHealth {
         RandomDate randomDate = new RandomDate();
         RandomNumber randomNumber = new RandomNumber();
 
-        String[] medicalHistory = {"糖尿病","甲亢","无"};
+        String[] medicalHistory = {"糖尿病","甲亢","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无","无"};
 
 
 
@@ -50,7 +50,7 @@ public class CrewHealth {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO b_crewHealth(personId,medicalHistory,treatDate,bloodType)" +
                         "VALUES(?,?,?,?)";
 

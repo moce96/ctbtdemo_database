@@ -41,7 +41,7 @@ public class CrewExam {
         List<CrewCertType> crewCertTypes = getCrewCertType.getAllByExcel();
 
         //开始插入数据
-        for (int i = 0; i <= 700; i++) {
+        for (int i = 0; i <= 8000; i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);

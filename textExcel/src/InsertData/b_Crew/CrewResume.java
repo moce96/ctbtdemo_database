@@ -33,8 +33,8 @@ public class CrewResume {
         RandomDate randomDate = new RandomDate();
         RandomNumber randomNumber = new RandomNumber();
 
-        String[]jobNature = {"正式员工","临时工","实习生"};
-
+        String[]jobNature = {"正式员工","临时工","实习生","正式员工","正式员工","正式员工","正式员工","正式员工","正式员工"};
+        String[] jobType = {"1","2","3","4","5"};
 
 
         // 创建获得 ship excel 表数据的类
@@ -56,7 +56,7 @@ public class CrewResume {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO b_crewResume(personId,shipId,jobTypeId,companyId,jobNature,startDate,endDate)" +
                         "VALUES(?,?,?,?,?,?,?)";
 
@@ -68,7 +68,7 @@ conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessag
                 pstm.setString(1,person.id);
                 pstm.setString(2,person.shipId);
                 j = random.nextInt(jobTypes.size());
-                pstm.setString(3,jobTypes.get(j).jobTypeId);
+                pstm.setString(3,jobType[random.nextInt(jobType.length)]);
                 j = random.nextInt(companies.size());
                 pstm.setString(4,companies.get(j).id);
                 pstm.setString(5,jobNature[random.nextInt(jobNature.length)]);

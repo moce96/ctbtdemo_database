@@ -1,4 +1,5 @@
 import InsertData.RegionData;
+import InsertData.b_Crew.CrewHealth;
 import InsertData.e_accident.*;
 import InsertData.i_oceanfishing.*;
 import InsertData.j_port.*;
@@ -56,11 +57,11 @@ public class Mian {
 //         * b_crew
 //         */
 ////        CrewFoundation.crewFoundation();      //船员基础表
-////        CrewHealth.crewHealth();              //船员健康表
+//        CrewHealth.crewHealth();              //船员健康表
 //        CrewResume.crewResume();              //船员履历表
-//        CrewComprehensiveEval.crewComprehensiveEval();        //人员综合审查表
-//        CrewCert.crewCert();                  //船员证书表
-//        CrewLawResult.crewCredit();              //船员执法结果
+//        CrewComprehensiveEval.crewComprehensiveEval();        //人员综合审查表a
+//        CrewCert.crewCert();                  //船员证书表a
+//        CrewLawResult.crewCredit();              //船员执法结果a
 //        CrewInsurance.crewInsurance();          //船员保险表
 //        CrewExam.crewExam();                    //船员考试表
 //        CrewTraining.crewTraining();            //人员培训表
