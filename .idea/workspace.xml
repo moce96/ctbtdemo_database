@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ad23367-a1d5-484d-92d9-d840d9e0cacb" name="Default Changelist" comment="" />
+    <list default="true" id="8ad23367-a1d5-484d-92d9-d840d9e0cacb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +20,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="D:/资料/联邦学习资料/代码/federated-learning-master" />
+    <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -45,6 +49,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599101045389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1440.3.1440.860@0.0.1920.1040" timestamp="1599101045389" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1595244665371">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1440.3.1440.860@0.0.1920.1040" timestamp="1595244665371" />
     <state x="640" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1594173199120">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

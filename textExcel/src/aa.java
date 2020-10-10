@@ -26,7 +26,7 @@ public class aa {
     private static final String[] mysqlMessage = MysqlRead.message;
     private static String password = "123456";
 
-    public static void engiAudit() {
+    public static void AA() {
 
         Random random = new Random();
         RandomDate randomDate = new RandomDate();
@@ -51,17 +51,20 @@ public class aa {
 
 
         //开始插入数据
-        for (InspectApply inspectApply : inspectApplies) {
+        for (int id=3899; id<=6899; id++) {
 
             try {
                 Class.forName(mysqlMessage[0]);
                 conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
-                String sql = "INSERT INTO a_aaaa(id,type) SELECT shipId,shipTypeId FROM s_shipFoundation WHERE shipId = ?";
+                String sql = "UPDATE s_fishCatch set catchDate=? WHERE id = ?";
 
 
                 pstm = conn.prepareStatement(sql);
 
-                pstm.setString(1,inspectApply.shipId);
+                pstm.setObject(1,randomDate.generateRandomDate("2020-01-01","2020-10-10"));
+                pstm.setString(2,String.valueOf(id));
+
+
 
 
 

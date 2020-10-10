@@ -32,7 +32,7 @@ public class Solution {
 
 
 
-//        aa.engiAudit();
+        aa.AA();
 //        LawEnforcement.lawEnforcement();                  //执法数据
 //        DangerCheck.investigation();                      //排查隐患数据
 //        DisputeData.disputeData();                        //渔事纠纷
@@ -65,14 +65,14 @@ public class Solution {
 //         * b_crew
 //         */
 //        CrewFoundation.crewFoundation();      //船员基础表
-        CrewHealth.crewHealth();              //船员健康表
-        CrewResume.crewResume();              //船员履历表
+//        CrewHealth.crewHealth();              //船员健康表
+//        CrewResume.crewResume();              //船员履历表
 //        CrewComprehensiveEval.crewComprehensiveEval();        //人员综合审查表
 //        CrewCert.crewCert();                  //船员证书表
 //        CrewLawResult.crewCredit();              //船员执法结果
-        CrewInsurance.crewInsurance();          //船员保险表
-        CrewExam.crewExam();                    //船员考试表
-        CrewTraining.crewTraining();            //人员培训表
+//        CrewInsurance.crewInsurance();          //船员保险表
+//        CrewExam.crewExam();                    //船员考试表
+//        CrewTraining.crewTraining();            //人员培训表
 ////
 //        /**
 //         * c_company
