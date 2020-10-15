@@ -45,7 +45,7 @@ public class ShipCrew {
 
             try {
                 Class.forName(mysqlMessage[0]);
-conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
+                conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
                 String sql = "INSERT INTO s_shipCrew(shipId,personId,position,photo,inputLoc,boardingTime,departureTime)" +
                         "VALUES(?,?,?,?,?,?,?)";
 

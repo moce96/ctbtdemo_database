@@ -1,5 +1,6 @@
 import getAllByExcel.checkout.GetInspectApply;
 import getAllByExcel.company.GetCompany;
+import getAllByExcel.crew.GetCrew;
 import getAllByExcel.engineering.GetAudit;
 import getAllByExcel.ship.GetShipCredit;
 import random.MysqlRead;
@@ -7,6 +8,7 @@ import random.*;
 import random.RandomNumber;
 import utilClass.checkout.InspectApply;
 import utilClass.company.Company;
+import utilClass.crew.Crew;
 import utilClass.engineering.Audit;
 
 import java.sql.*;
@@ -35,13 +37,28 @@ public class aa {
 
         String[] familyname = {"赵","钱","孙","李","周","吴","郑","王","宋","陈","白","黄","梁","燕","邱","仇","牟","潘"};
         String[] firstname = {"伟","芳","秀英","娜","敏","静","立","丽","强","军","磊","刚","平","子良","建国","建军","国林","国梁","鸿蒙","浩宇","轩","艳","枫","鸣","浮萍","二狗","爱国"};
-        String[] catchType = {"长鳍","大目","鱿鱼","黄鳍","鲣鱼","鲨","红鳍","蓝枪","黑鳍","剑鱼"};
+        String[] age = {"50-60","50-60","50-60","50-60","50-60","50-60","50-60","50-60","50-60","50-60",
+                               "40-50","40-50","40-50","40-50","40-50","40-50",
+                                "30-40","30-40","30-40","30-40"};
+        String[] workYear ={"30-40","30-40","30-40","30-40","30-40","30-40","30-40","30-40","30-40","30-40","30-40","30-40","30-40","30-40",
+                            "1-10","1-10",
+                            "10-20","10-20","10-20","10-20","10-20","10-20","10-20","10-20",
+                            "20-30","20-30","20-30","20-30","20-30","20-30","20-30","20-30","20-30","20-30",
+                            "40以上"};
+        String[] territorial = {"普陀区","普陀区","普陀区","普陀区","普陀区","普陀区","普陀区","普陀区","普陀区","普陀区","普陀区",
+                                "岱山县","岱山县","岱山县","岱山县","岱山县","岱山县","岱山县","岱山县","岱山县","岱山县",
+                                "嵊泗县","嵊泗县","嵊泗县","嵊泗县","嵊泗县","嵊泗县","嵊泗县",
+                                "定海区"};
+        String[] creditStatus = {"正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常","正常",
+                                "良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好"};
 
-        // 创建获得  excel 表数据的类
+
+                // 创建获得  excel 表数据的类
         GetAudit getAudit = new GetAudit();
         GetCompany getCompany = new GetCompany();
         GetInspectApply getInspectApply = new GetInspectApply();
         GetShipCredit getShipCredit = new GetShipCredit();
+        GetCrew getPersonId = new GetCrew();
 
 
         // 用从表里获得的数据  生成列表  用于填充数据库
@@ -49,25 +66,28 @@ public class aa {
         List<Company> companyList = getCompany.getAllByExcel();
         List<InspectApply> inspectApplies = getInspectApply.getAllByExcel();
         List<utilClass.ship.ShipCredit> shipCreditList = getShipCredit.getAllByExcel();
+        List<Crew> personList = getPersonId.getAllByExcel();
 
 
 
 
         //开始插入数据
-        for (int id=1; id<=101; id++) {
+        for (Crew person : personList) {
 
             try {
                 Class.forName(mysqlMessage[0]);
                 conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
-                String sql = "UPDATE h_marketTransaction set transactionDate=?,fishType=? WHERE id = ?";
+                String sql = "UPDATE b_crewFoundation set age=?,workYear=?,territorial=?,creditStatus=? WHERE personId = ?";
 
 
                 pstm = conn.prepareStatement(sql);
 
                 int j = random.nextInt(shipCreditList.size());
-                pstm.setObject(1,randomDate.generateRandomDate("2020-01-01","2020-10-13"));
-                pstm.setString(2,catchType[random.nextInt(catchType.length)]);
-                pstm.setString(3,String.valueOf(id));
+                pstm.setString(1,age[random.nextInt(age.length)]);
+                pstm.setString(2,workYear[random.nextInt(workYear.length)]);
+                pstm.setString(3,territorial[random.nextInt(territorial.length)]);
+                pstm.setString(4,creditStatus[random.nextInt(creditStatus.length)]);
+                pstm.setString(5,String.valueOf(person.id));
 
 
 
