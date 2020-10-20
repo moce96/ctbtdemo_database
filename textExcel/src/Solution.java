@@ -64,7 +64,7 @@ public class Solution {
 //        /**
 //         * b_crew
 //         */
-        CrewFoundation.crewFoundation();      //船员基础表
+//        CrewFoundation.crewFoundation();      //船员基础表
 //        CrewHealth.crewHealth();              //船员健康表
 //        CrewResume.crewResume();              //船员履历表
 //        CrewComprehensiveEval.crewComprehensiveEval();        //人员综合审查表

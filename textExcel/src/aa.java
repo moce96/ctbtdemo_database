@@ -11,6 +11,10 @@ import utilClass.company.Company;
 import utilClass.crew.Crew;
 import utilClass.engineering.Audit;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.*;
 import java.util.List;
 import java.util.Random;
@@ -28,6 +32,25 @@ public class aa {
     private static String url = "jdbc:mysql://192.168.105.197:3306/ctbtdemo?serverTimezone=GMT%2B8&useSSL=false";
     private static final String[] mysqlMessage = MysqlRead.message;
     private static String password = "123456";
+
+    //把图片转为二进制存入数据库
+    public static byte[] getImgStr(String path) throws IOException, IOException {
+        FileInputStream fis = new FileInputStream(path);
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+
+        int len = 0;
+        byte[] b = new byte[1024];
+        while ((len = fis.read(b))!= -1){
+            out.write(b,0,len);
+        }
+
+        //接收out
+        byte[] array = out.toByteArray();
+        fis.close();
+        out.close();
+
+        return array;
+    }
 
     public static void AA() {
 
@@ -53,6 +76,8 @@ public class aa {
                                 "良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好","良好"};
 
 
+        String[] catchType = {"带鱼","大黄鱼","小黄鱼","三疣梭子蟹","青占鱼","海蜇","鲳鱼"};
+
                 // 创建获得  excel 表数据的类
         GetAudit getAudit = new GetAudit();
         GetCompany getCompany = new GetCompany();
@@ -72,22 +97,23 @@ public class aa {
 
 
         //开始插入数据
-        for (Crew person : personList) {
+        for (int i=3899; i<=3899; i++) {
 
             try {
                 Class.forName(mysqlMessage[0]);
                 conn = DriverManager.getConnection(mysqlMessage[1], mysqlMessage[2], mysqlMessage[3]);
-                String sql = "UPDATE b_crewFoundation set age=?,workYear=?,territorial=?,creditStatus=? WHERE personId = ?";
+                String sql = "UPDATE b_crewComprehensiveEval set enclosure=?";
 
+                byte[] arr = getImgStr("src\\photo\\person.jpg");
+                Blob blob = conn.createBlob();
+                blob.setBytes(1,arr);
 
                 pstm = conn.prepareStatement(sql);
 
+
+
                 int j = random.nextInt(shipCreditList.size());
-                pstm.setString(1,age[random.nextInt(age.length)]);
-                pstm.setString(2,workYear[random.nextInt(workYear.length)]);
-                pstm.setString(3,territorial[random.nextInt(territorial.length)]);
-                pstm.setString(4,creditStatus[random.nextInt(creditStatus.length)]);
-                pstm.setString(5,String.valueOf(person.id));
+                pstm.setBlob(1,blob);
 
 
 
@@ -99,6 +125,8 @@ public class aa {
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
                 e.printStackTrace();
             } finally {
 
